@@ -53,6 +53,13 @@
     Persion.prototype.constructor === Persion
     // __proto_js 中所有对象都会携带 js 中内部属性
     p.__proto__ === Persion.prototype
+    Persion.__proto__ === Function.prototype
+    Function.prototype.__proto__ === Object.prototype
+    Object.prototype.__proto__ === null;
+
+    Function.__proto__ === Object.__proto__
+
+    // Object.prototype === Function.prototype.__proto__
     /*
      * 
      * 挂载在函数内部的方法，实例化后会复制构造函数 的方法
@@ -60,5 +67,5 @@
      * 两个都可以通过实例访问
      * 一个需要访问构造函数内部的私有变量，可以定义在构造函数内部、其他都可以定义在原型链上
      * 
-     * / 
+     * /
 ```
