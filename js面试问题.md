@@ -57,9 +57,10 @@
     Function.prototype.__proto__ === Object.prototype
     Object.prototype.__proto__ === null;
 
-    Function.__proto__ === Object.__proto__
-
-    // Object.prototype === Function.prototype.__proto__
+    
+    Function.prototype == Function.__proto__ //true
+    Object.__proto__ == Function.__proto__ //true
+    Object.__proto__ == Function.prototype) //true__proto__
     /*
      * 
      * 挂载在函数内部的方法，实例化后会复制构造函数 的方法
